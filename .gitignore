@@ -1,3 +1,7 @@
+# executables
+fibc
+fibasm
+
 # Prerequisites
 *.d
 
