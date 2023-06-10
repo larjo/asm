@@ -7,14 +7,14 @@
 // int is 32 bits
 // short is 16 bits
 
-extern long fib(int);
+extern long fib(short n);
 
 int main(int argc, char *argv[])
 {
     if (argc == 2)
     {
         int n = atoi(argv[1]);
-        printf("Fibonacci of %d is %ld\n", n, fib(n));
+        printf("Fibonacci of %hd is %ld\n", n, fib(n));
     }
     else
     {

@@ -1,11 +1,15 @@
+section .text
 global fib
 
-; rdi = n
-; use di to access the lowest 2 bytes of rdi
+; 64 bit calling convention:
+; input: rdi, rsi, rdx, rcx, r8, r9
+; output: rax
+
 ; di1 = 1 byte
 ; di = 2 bytes
 ; edi = 4 bytes
 ; rdi = 8 bytes
+; use di to access the lowest 2 bytes of rdi
 fib:
     ; return n if n <= 1
     cmp di, 1
