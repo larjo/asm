@@ -1,19 +1,16 @@
 all: fibc fibasm
 
-fibc: fibc.o
-	gcc fibc.o -z noexecstack -no-pie -o fibc
-
-fibc.o: fibc.c
-	gcc -c fibc.c
+fibc: fibc.c
+	gcc fibc.c -O3 -o fibc
 
 fibasm: fib.o fibasm.o
-	gcc fib.o fibasm.o -z noexecstack -no-pie -o fibasm
+	gcc fib.o fibasm.o -o fibasm
 
-fib.o : fib.asm
-	nasm -f elf64 -gdwarf fib.asm
+fib.o: fib.asm
+	nasm -f elf64 -Ox fib.asm
 
-fibasm.o : fibasm.c
-	gcc -c fibasm.c
+fibasm.o: fibasm.c
+	gcc -c -O3 fibasm.c
 
 clean:
 	rm fibc fibasm fib*.o
