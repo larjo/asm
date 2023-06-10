@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int fibc(int n)
+long fibc(int n)
 {
     if (n <= 1)
     {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         int n = atoi(argv[1]);
-        printf("Fibonacci c of %d is %d\n", n, fibc(n));
+        printf("Fibonacci c of %d is %ld\n", n, fibc(n));
     }
     else
     {
