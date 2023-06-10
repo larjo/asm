@@ -1,5 +1,4 @@
 global fib:function
-global test:function
 
 ; rdi = n
 fib:
@@ -32,10 +31,4 @@ fib:
 base_case:
     ; return result in rax
     mov rax, rdi
-    ret
-
-test:
-    mov rdx, rdi
-    mov rax, 1000
-    mul rdx
     ret
