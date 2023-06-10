@@ -11,25 +11,26 @@ fib:
     cmp di, 1
     jle base_case
 
-    ; save di
+    ; save di, rbx
     push di
+    push rbx
 
     ; call fib(n-1)
     dec  di
     call fib
 
-    ; save result
-    push rax
+    ; save result in rbx
+    mov rbx, rax
 
     ; call fib(n-2)
     dec di
     call fib
 
     ; add results
-    pop rbx
     add rax, rbx
 
-    ; restore di and return
+    ; restore di, rbx
+    pop rbx
     pop di
     ret
 
