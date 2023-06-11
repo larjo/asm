@@ -5,7 +5,7 @@ global fib
 ; input: rdi, rsi, rdx, rcx, r8, r9
 ; output: rax
 
-; di1 = 1 byte
+; dil = 1 byte
 ; di = 2 bytes
 ; edi = 4 bytes
 ; rdi = 8 bytes
