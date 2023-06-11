@@ -6,6 +6,7 @@
 // long is 64 bits
 // int is 32 bits
 // short is 16 bits
+// char is 8 bits
 
 extern long fib(short n);
 
