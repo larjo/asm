@@ -38,6 +38,6 @@ fib:
     ret
 
 base_case:
-    ; return result in eax
+    ; return result in rax
     mov rax, rdi
     ret
